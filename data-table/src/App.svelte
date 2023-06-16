@@ -1,10 +1,14 @@
 <script>
-	export let name;
+	import VolunteerCards from './VolunteerCards.svelte';
+
+
+
 </script>
 
+<VolunteerCards />
+
 <main>
-	<h1>{name}</h1>
-	<p></p>
+	<p>test</p>
 </main>
 
 <style>
@@ -15,12 +19,6 @@
 		margin: 0 auto;
 	}
 
-	h1 {
-		color: #1eff00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
 
 	@media (min-width: 640px) {
 		main {
@@ -28,4 +26,3 @@
 		}
 	}
 </style>
-  
