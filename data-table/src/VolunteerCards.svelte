@@ -1,7 +1,7 @@
 <script>
 	import { flip } from 'svelte/animate';
 	import Spinner from './spinner.svelte';
-	import item from './demo-output.json';
+	import demo from './demo-output.json';
 
 	
 	
@@ -75,7 +75,6 @@
 <button on:click={reload(sourceJson)}>Reload</button>
 <button on:click={sort("name")}>Name &varr;</button>
 <button on:click={sort("email")}>email &varr;</button>
-<p>{item.Status}</p>
 <select on:change={() => reload(document.getElementById('jsonSelector').value)} id="jsonSelector">
 	<option value="users">Users</option>
 	<option value="photos">Photos</option>
@@ -113,7 +112,7 @@
 {:catch error}
 	<p style="color: red">{error.message}</p>
 {/await}
-<p>test</p>
+
 
 <style>
 	table {

@@ -1,14 +1,11 @@
 <script>
 	import VolunteerCards from './VolunteerCards.svelte';
-
-
-
 </script>
 
 <VolunteerCards />
 
 <main>
-	<p>test</p>
+	<p></p>
 </main>
 
 <style>
