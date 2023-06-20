@@ -13,6 +13,7 @@
     ["Sarah", "sarah@gmail.com", "(01) 22 888 4444"],
     ["Afshin", "afshin@mail.com", "(353) 22 87 8356"]
   ]
+	
 	let newRow = [...columns];
 	console.log(demo);
 </script>
