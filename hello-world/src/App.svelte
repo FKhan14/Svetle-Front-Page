@@ -11,10 +11,9 @@
 		<h3 class="extended">Hyper Visor: {demo.HyperVisor}</h3>
 		<h3 class="extended">Host: {demo.HostName}</h3>
 		<h3 class="extended">last check in time: {demo.LastCheckInTime}</h3>
-	{/each}
+	{/each} 
+	<p>hello world</p>
 	<button on:click{display}>show more</button>
 <style>
-	.extended{
-		display: block;
-	}
+
 </style>
