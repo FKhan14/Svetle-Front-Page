@@ -1,30 +1,44 @@
 <script>
-	export let name;
-</script>
+	import data from './demo.json';
+	
+	console.log(data);
+	let columns = ["VMName", "IP", "HostName", "Status", "LastCheckInTime", "HyperVisor"]
+	let newRow = [...columns];
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+
+	// possible solution 1
+	//let vmname = document.getElementById(vm)
+</script>
+<p>Hello Wrold</p>
+<table>
+	<tr>
+		{#each columns as column}
+			<th>{column}</th>
+		{/each}
+	</tr>
+	
+	{#each data as row}
+		<tr>
+			{#each row as cell}
+			<td contenteditable="true" bind:innerHTML={cell} />
+			{/each}
+		
+		</tr>
+	{/each}
+	<tr style="color: grey">
+		{#each newRow as column}
+			<td contenteditable="true" bind:innerHTML={column} />
+		{/each}
+		
+	</tr>
+	<pre style="background: #eee">{JSON.stringify(data, null, 2)}</pre> 
+</table>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
+	tr td:focus {
+		background: #eee;
 	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
+	table {
+		display: block;
 	}
 </style>
