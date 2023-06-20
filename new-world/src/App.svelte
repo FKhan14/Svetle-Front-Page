@@ -9,7 +9,7 @@
 	// possible solution 1
 	//let vmname = document.getElementById(vm)
 </script>
-
+<p>Hello Wrold</p>
 <table>
 	<tr>
 		{#each columns as column}
@@ -37,5 +37,8 @@
 <style>
 	tr td:focus {
 		background: #eee;
+	}
+	table {
+		display: block;
 	}
 </style>
